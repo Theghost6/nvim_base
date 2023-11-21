@@ -38,7 +38,8 @@ keymap("i", "<M-h>", "<Left>", opts)
 keymap("i", "<M-l>", "<Right>", opts)
 
 -- Next buffers
-keymap("n", "<TAB>", "<cmd>TeBufNext<CR>", opts)
+keymap("n", "<TAB>", "<cmd>bn<CR>", opts)
+keymap("n", "<S-TAB>", "<cmd>bp<CR>", opts)
 
 -- Clear search
 keymap("n", "<Enter>", "<cmd>nohlsearch<CR>", opts)
@@ -56,6 +57,7 @@ map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help ta
 map("n", "<F4>", ":NvimTreeToggle<CR>") -- toggle file explorer
 -- keymap("n", "<F3>", ":!g++ -o %< % && ./%<<CR>",opts)
 keymap("n", "<F3>", [[:term g++ -o %< % && ./%<<CR> ]], opts)
+--FindCmdline
 vim.api.nvim_exec(
 	[[
   augroup AutoFormat

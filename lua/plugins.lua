@@ -35,6 +35,8 @@ return packer.startup(function(use)
 		"svrana/neosolarized.nvim",
 		requires = { "tjdevries/colorbuddy.nvim" },
 	})
+	-- using packer.nvim
+	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
 	use("nvim-lualine/lualine.nvim") -- Statusline
 	use("onsails/lspkind-nvim") -- vscode-like pictograms
 	-- vs-code like icons

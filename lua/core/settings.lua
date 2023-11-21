@@ -1,5 +1,5 @@
-vim.cmd("filetype plugin indent off")
-vim.cmd("syntax off")
+vim.cmd("filetype plugin indent on")
+vim.cmd("syntax on")
 
 local options = {
 	-- NUMBER
@@ -48,15 +48,15 @@ local options = {
 }
 
 local globals = {
-	mapleader = ' ',
-	maplocalleader = ' ',
+	mapleader = " ",
+	maplocalleader = " ",
 	speeddating_no_mappings = 1,
 }
 
 vim.opt.listchars = "tab:  "
 vim.opt.fillchars = { eob = " ", foldopen = "", foldsep = " ", foldclose = "" }
-vim.opt.shortmess:append "sI"
-vim.opt.formatoptions:remove('c', 'r', 'o');
+vim.opt.shortmess:append("sI")
+vim.opt.formatoptions:remove("c", "r", "o")
 
 local builtins = {
 	"2html_plugin",
@@ -90,7 +90,7 @@ local builtins = {
 	"fzf",
 	"tutor_mode_plugin",
 	"sleuth",
-	"vimgrep"
+	"vimgrep",
 }
 
 for _, plugin in ipairs(builtins) do
